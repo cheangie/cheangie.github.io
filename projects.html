@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Angie Che</title>
+    <meta name="description" content="Projects by Angie Che." />
+    <link rel="icon" type="image/svg+xml" href="ui/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+    <header data-nav></header>
+
+    <main class="wrap">
+        <section class="section">
+            <h1 class="page-title">Projects</h1>
+            <p class="page-lead page-lead--wide">Things I've built, whether that be long-term, short-term, side projects, or for hackathons. Hover over projects to read a blurb, or click into them to see more.</p>
+
+            <div class="filter-bar" data-filter role="group" aria-label="Filter projects by type"></div>
+
+            <div class="screen">
+                <div class="screen__bar">
+                    <span class="screen__dot"></span>
+                    <span class="screen__label">All Projects</span>
+                    <span class="screen__hint" data-count></span>
+                </div>
+                <div class="grid-screen" data-projects role="list" aria-label="All projects">
+                    <!-- project cards injected by projects.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" data-footer></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

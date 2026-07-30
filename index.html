@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angie Che — Portfolio</title>
+    <meta name="description" content="Angie Che — creative software engineer & interdisciplinary designer." />
+    <link rel="icon" type="image/svg+xml" href="ui/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+    <header data-nav></header>
+
+    <main class="wrap">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__avatar" data-avatar>🐱</div>
+            <h1 class="hero__name" data-name>Angie Che</h1>
+            <p class="hero__title" data-title></p>
+            <p class="hero__tagline" data-tagline></p>
+        </section>
+
+        <!-- ABOUT BLURB -->
+        <section class="section home-about">
+            <div class="panel">
+                <p class="home-about__text" data-blurb></p>
+                <a class="btn btn--ghost" href="about.html">About Me →</a>
+            </div>
+        </section>
+
+        <!-- PROJECTS — framed "screen" shelf (all projects) + View all -->
+        <section class="section" id="projects">
+            <div class="section__head">
+                <h2 class="section__title">Projects</h2>
+                <a class="btn btn--ghost" href="projects.html">View all projects →</a>
+            </div>
+            <div class="screen">
+                <div class="screen__bar">
+                    <span class="screen__dot"></span>
+                    <span class="screen__label">Projects</span>
+                    <span class="screen__hint" data-hint>scroll →</span>
+                </div>
+                <div class="shelf" data-projects role="list" aria-label="Projects">
+                    <!-- project cards injected by home.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" data-footer></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Angie Che</title>
+    <meta name="description" content="About & contact — Angie Che." />
+    <link rel="icon" type="image/svg+xml" href="ui/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+    <header data-nav></header>
+
+    <main class="wrap">
+        <section class="section">
+            <h1 class="page-title">About</h1>
+
+            <div class="about">
+                <!-- Left: intro + bio -->
+                <div class="about__main panel">
+                    <div class="about__intro">
+                        <div class="about__avatar" data-avatar>🐱</div>
+                        <div>
+                            <h2 class="about__name" data-name>Angie Che</h2>
+                            <p class="about__title" data-title></p>
+                            <p class="about__loc" data-location></p>
+                        </div>
+                    </div>
+                    <div class="about__bio" data-bio></div>
+                </div>
+
+                <!-- Right: education + tech (combined height matches the left box) -->
+                <div class="about__practical">
+                    <div class="panel">
+                        <h3 class="panel__title"><img class="icon-img" src="ui/about/education_icon.svg" data-icon-light="ui/about/education_icon.svg" data-icon-dark="ui/about/education_icon_white.svg" alt="" aria-hidden="true" /> Education</h3>
+                        <div data-education></div>
+                    </div>
+
+                    <div class="panel">
+                        <h3 class="panel__title"><img class="icon-img" src="ui/about/code_icon.svg" alt="" aria-hidden="true" /> Tech &amp; tools</h3>
+                        <div class="panel__tags" data-stack></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun facts — full-width, flush below the two columns -->
+            <div class="about__funfacts panel">
+                <h3 class="panel__title">Fun facts!</h3>
+                <ul class="funfacts" data-funfacts></ul>
+            </div>
+
+            <!-- Get in touch — full-width contact box -->
+            <section class="contact panel" aria-labelledby="contact-title">
+                <h2 class="contact__title" id="contact-title">Get in touch</h2>
+                <div class="contact__grid">
+                    <!-- Send a message form -->
+                    <form class="contact__form" data-contact-form novalidate>
+                        <div class="field">
+                            <label for="cf-name">Name</label>
+                            <input id="cf-name" name="name" type="text" autocomplete="name" required />
+                        </div>
+                        <div class="field">
+                            <label for="cf-email">Email</label>
+                            <input id="cf-email" name="email" type="email" autocomplete="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="cf-subject">Subject</label>
+                            <input id="cf-subject" name="subject" type="text" required />
+                        </div>
+                        <div class="field">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button class="btn" type="submit" data-contact-submit>Send message</button>
+                        <p class="contact__status" data-contact-status role="status" aria-live="polite"></p>
+                    </form>
+
+                    <!-- Email + socials -->
+                    <aside class="contact__info">
+                        <h3 class="contact__subtitle">Reach me directly</h3>
+                        <a class="contact__email" data-contact-email href="#"></a>
+                        <h3 class="contact__subtitle">Find me online</h3>
+                        <div class="contact__socials" data-contact-socials></div>
+                    </aside>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer" data-footer></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

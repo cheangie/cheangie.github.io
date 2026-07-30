@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun — Angie Che</title>
+    <meta name="description" content="The fun stuff — what Angie's into, plus creative work." />
+    <link rel="icon" type="image/svg+xml" href="ui/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+    <header data-nav></header>
+
+    <main class="wrap">
+        <section class="section">
+            <h1 class="page-title">Fun</h1>
+            <p class="page-lead">A little peek at what I'm into and the creative stuff I make.</p>
+        </section>
+
+        <!-- NOW BOARD + side blurb -->
+        <section class="section">
+            <h2 class="section__title section__title--left">Right now</h2>
+            <div class="now-row">
+                <div class="now-blurb panel" data-now-blurb></div>
+                <div class="now-board" data-now></div>
+            </div>
+        </section>
+
+        <!-- CREATIVE WORKS -->
+        <section class="section">
+            <h2 class="section__title section__title--left">Creative works</h2>
+            <p class="page-lead">From illustration, to design, here's some fun things I've been working on in my free time!</p>
+            <div class="screen">
+                <div class="screen__bar">
+                    <span class="screen__dot"></span>
+                    <span class="screen__label">Creative</span>
+                </div>
+                <div class="grid-screen" data-creative role="list" aria-label="Creative works">
+                    <!-- creative cards injected by fun.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" data-footer></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/fun.js"></script>
+</body>
+</html>
