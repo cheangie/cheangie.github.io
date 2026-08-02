@@ -214,16 +214,23 @@ a { color: inherit; }
 .statusbar__btn:hover { filter: brightness(1.04); transform: translateY(-1px); }
 .statusbar__btn:active { transform: translateY(1px); box-shadow: var(--inset); }
 
-/* Responsive: keep clock centered on its own row, tabs scroll */
+/* Responsive: tabs get the full top row; clock + controls share the second row
+   (controls drop to the clock's level so they don't crowd the tabs). */
 @media (max-width: 720px) {
   .nav {
     grid-template-columns: 1fr auto;
-    grid-template-areas: "left right" "center center";
+    grid-template-areas: "left left" "center right";
     row-gap: 8px;
   }
   .nav__zone--left { grid-area: left; }
-  .nav__zone--right { grid-area: right; }
-  .nav__zone--center { grid-area: center; justify-self: center; }
+  .nav__zone--center { grid-area: center; justify-self: start; }
+  .nav__zone--right { grid-area: right; justify-self: end; }
+  /* icon-only, compact theme toggle on mobile */
+  .theme-toggle__label { display: none; }
+  .theme-toggle { padding: 5px 8px; }
+}
+@media (max-width: 380px) {
+  .nav .statusbar__date { display: none; }
 }
 
 /* ----------------------------------------------------------------------------

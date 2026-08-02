@@ -161,8 +161,8 @@
     document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
       var next = name === "dark" ? "light" : "dark";
       btn.innerHTML = name === "dark"
-        ? '<span aria-hidden="true">' + iconMarkup("ui/navbar/darkmode_icon.svg") + "</span> Dark"
-        : '<span aria-hidden="true">' + iconMarkup("ui/navbar/lightmode_icon.svg") + "</span> Light";
+        ? '<span aria-hidden="true">' + iconMarkup("ui/navbar/darkmode_icon.svg") + '</span><span class="theme-toggle__label">Dark</span>'
+        : '<span aria-hidden="true">' + iconMarkup("ui/navbar/lightmode_icon.svg") + '</span><span class="theme-toggle__label">Light</span>';
       btn.setAttribute("aria-label", "Switch to " + next + " mode");
     });
   }
